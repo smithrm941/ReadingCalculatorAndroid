@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Reading Calculator</string>
     <string name="BookTitle">Book Title</string>
+    <string name="appName">READING CALCULATOR</string>
+    <string name="BookPages">Number of Pages</string>
+    <string name="NumberOfDays">Days To Finish</string>
+    <string name="NumberOfPages">Number Of Pages</string>
 </resources>
