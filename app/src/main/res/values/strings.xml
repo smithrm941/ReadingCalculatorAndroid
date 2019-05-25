@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Reading Calculator</string>
+    <string name="BookTitle">Book Title</string>
 </resources>
