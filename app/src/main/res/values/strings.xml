@@ -5,4 +5,6 @@
     <string name="BookPages">Number of Pages</string>
     <string name="NumberOfDays">Days To Finish</string>
     <string name="NumberOfPages">Number Of Pages</string>
+    <string name="CurrentPage">Current Page</string>
+    <string name="CalculationButton">Calculate Pages Per Day To Finish</string>
 </resources>

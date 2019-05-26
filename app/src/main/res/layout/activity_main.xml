@@ -10,7 +10,7 @@
         android:id="@+id/appName"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="75dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:width="200dp"
@@ -55,6 +55,23 @@
         app:layout_constraintTop_toBottomOf="@+id/whatBook" />
 
     <EditText
+        android:id="@+id/currentPage"
+        android:layout_width="207dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:height="100sp"
+        android:hint="@string/CurrentPage"
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/howManyPages" />
+
+    <EditText
         android:id="@+id/daysToFinish"
         android:layout_width="207dp"
         android:layout_height="44dp"
@@ -69,5 +86,20 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/howManyPages" />
+        app:layout_constraintTop_toBottomOf="@+id/currentPage" />
+
+    <Button
+        android:id="@+id/Calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/CalculationButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daysToFinish" />
 </android.support.constraint.ConstraintLayout>
