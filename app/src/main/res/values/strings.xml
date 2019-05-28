@@ -7,4 +7,7 @@
     <string name="NumberOfPages">Number Of Pages</string>
     <string name="CurrentPage">Current Page</string>
     <string name="CalculationButton">Calculate Pages Per Day To Finish</string>
+    <string name="CalculationMessage">You have \n\ [pages left] \n\  pages left in \n\[book].\n\ \n\ \n\You can finish
+            this book in [days] days if you read [pages] pages per day.</string>
+
 </resources>
