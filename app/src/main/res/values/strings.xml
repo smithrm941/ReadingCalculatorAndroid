@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Reading Calculator</string>
+    <string name="BookTitle">Book Title</string>
+    <string name="appName">READING CALCULATOR</string>
+    <string name="BookPages">Number of Pages</string>
+    <string name="NumberOfDays">Days To Finish</string>
+    <string name="NumberOfPages">Number Of Pages</string>
+    <string name="CurrentPage">Current Page</string>
+    <string name="CalculationButton">Calculate Pages Per Day To Finish</string>
+    <string name="CalculationMessage">You have \n\ [pages left] \n\  pages left in \n\[book].\n\ \n\ \n\You can finish
+            this book in [days] days if you read [pages] pages per day.</string>
+
 </resources>
