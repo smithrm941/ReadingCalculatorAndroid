@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import java.util.Locale;
+
 public class Calculation extends AppCompatActivity {
 
     public static final String TAG = Calculation.class.getSimpleName();
@@ -31,7 +33,7 @@ public class Calculation extends AppCompatActivity {
         bookTitleView.setText(title);
 
         // Want this to be part of current text "within [goal days] days"
-        daysToFinishView.setText(Integer.toString(daysToFinish));
+        daysToFinishView.setText(String.format(Locale.getDefault(), "%d", daysToFinish));
 
         // This value will be calculated based on daysToFinish, numberOfPages and currentPage
         // and be part of original text "[pages] pages per day!"
