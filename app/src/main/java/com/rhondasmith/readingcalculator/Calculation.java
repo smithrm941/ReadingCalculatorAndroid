@@ -28,9 +28,12 @@ public class Calculation extends AppCompatActivity {
         int numberOfPages = intent.getIntExtra("bookLength", 0);
         int currentPage = intent.getIntExtra("startingPage", 0);
         int daysToFinish = intent.getIntExtra("numberOfDays", 0);
-
-        // This needs a default if no title is entered:
-        bookTitleView.setText(title);
+        
+        if(title.equals("")) {
+            bookTitleView.setText(R.string.DefaultBookTitle);
+        } else {
+            bookTitleView.setText(title);
+        }
 
         // Want this to be part of current text "within [goal days] days"
         daysToFinishView.setText(String.format(Locale.getDefault(), "%d", daysToFinish));
