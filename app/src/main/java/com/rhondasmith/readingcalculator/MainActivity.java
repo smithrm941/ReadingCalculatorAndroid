@@ -1,5 +1,6 @@
 package com.rhondasmith.readingcalculator;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,7 +39,19 @@ public class MainActivity extends AppCompatActivity {
                 int numberOfPages = Integer.parseInt(bookLength);
                 int currentPage = Integer.parseInt(startingPage);
                 int daysToFinish = Integer.parseInt(numberOfDays);
+
+                makeCalculation(title, numberOfPages, currentPage, daysToFinish);
             }
         });
+    }
+
+    private void makeCalculation(String title, int numberOfPages, int currentPage, int daysToFinish) {
+        Intent intent = new Intent(this, Calculation.class);
+        intent.putExtra("title", title);
+        intent.putExtra("bookLength", numberOfPages);
+        intent.putExtra("startingPage", currentPage);
+        intent.putExtra("numberOfDays", daysToFinish);
+
+        startActivity(intent);
     }
 }
