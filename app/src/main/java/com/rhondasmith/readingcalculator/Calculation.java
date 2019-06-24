@@ -29,6 +29,8 @@ public class Calculation extends AppCompatActivity {
         int currentPage = intent.getIntExtra("startingPage", 0);
         int daysToFinish = intent.getIntExtra("numberOfDays", 0);
 
+        Log.d(TAG, title);
+
         if(title.equals("")) {
             bookTitleView.setText(R.string.DefaultBookTitle);
         } else {
@@ -37,8 +39,7 @@ public class Calculation extends AppCompatActivity {
 
         daysToFinishView.setText(getResources().getString(R.string.CalcLineThree, daysToFinish));
 
-        // This value will be calculated based on daysToFinish, numberOfPages and currentPage
-        // and be part of original text "[pages] pages per day!"
-        pagesPerDayView.setText("[calculated number] pages per day!");
+        int pagesPerDay = (numberOfPages - currentPage) / daysToFinish;
+        pagesPerDayView.setText(getResources().getString(R.string.CalcLineFive, pagesPerDay));
     }
 }
