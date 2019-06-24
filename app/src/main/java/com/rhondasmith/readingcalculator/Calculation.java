@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 public class Calculation extends AppCompatActivity {
 
@@ -15,6 +16,10 @@ public class Calculation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculation);
 
+        TextView bookTitleView = findViewById(R.id.calcLineTwo);
+        TextView daysToFinishView = findViewById(R.id.calcLineThree);
+        TextView pagesPerDayView = findViewById(R.id.calcLineFive);
+
         Intent intent = getIntent();
 
         String title = intent.getStringExtra("title");
@@ -22,9 +27,14 @@ public class Calculation extends AppCompatActivity {
         int currentPage = intent.getIntExtra("startingPage", 0);
         int daysToFinish = intent.getIntExtra("numberOfDays", 0);
 
-        Log.d(TAG, title);
-        Log.d(TAG, "number of pages: " + numberOfPages);
-        Log.d(TAG, "current page: " + currentPage);
-        Log.d(TAG, "days to finish: " + daysToFinish);
+        // This needs a default if no title is entered:
+        bookTitleView.setText(title);
+
+        // Want this to be part of current text "within [goal days] days"
+        daysToFinishView.setText(Integer.toString(daysToFinish));
+
+        // This value will be calculated based on daysToFinish, numberOfPages and currentPage
+        // and be part of original text "[pages] pages per day!"
+        pagesPerDayView.setText("[calculated number] pages per day!");
     }
 }
