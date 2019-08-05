@@ -13,4 +13,5 @@
     <string name="CalcLineThree">"in %1$d days"</string>
     <string name="CalcLineFour">you should be reading</string>
     <string name="CalcLineFive">"%1$d pages per day!"</string>
+    <string name="network_unavailable_message">Sorry, the network is unavailable.</string>
 </resources>
